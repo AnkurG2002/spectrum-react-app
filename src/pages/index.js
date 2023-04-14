@@ -1,4 +1,6 @@
 import Home from './Home';
-import Comment from './Comment';
+import Login from './Login';
+import Page404 from './Page404';
+import Signup from './Signup';
 
-export { Home, Comment };
+export { Home, Login, Signup, Page404 };
