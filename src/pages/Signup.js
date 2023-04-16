@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import { useAuth } from '../hooks';
@@ -35,16 +35,20 @@ const Signup = () => {
     const res = await auth.signup(name, email, password, confirmPassword);
 
     if (res.success) {
-      navigate('/login');
       setSigningUp(false);
-
       toast.success('User successfully registered');
+
+      navigate('/login');
     } else {
       toast.error(res.message);
     }
 
     setSigningUp(false);
   };
+
+  if (auth.user) {
+    return <Navigate to="/" />;
+  }
   return (
     <form className={styles.loginForm} onSubmit={handleSubmit}>
       <span className={styles.loginSignupHeader}>Register</span>

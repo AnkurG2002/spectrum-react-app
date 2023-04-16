@@ -11,8 +11,8 @@ const Navbar = () => {
         <Link to="/">
           <img
             alt="logo"
-            src="logo.png"
-            style={{ width: 200, borderRadius: 20 }}
+            src="https://1000logos.net/wp-content/uploads/2020/07/Charter-Spectrum-Logo.jpg"
+            style={{ width: 120, borderRadius: 30 }}
           />
         </Link>
       </div>
@@ -20,13 +20,13 @@ const Navbar = () => {
       <div className={styles.rightNav}>
         {auth.user && (
           <div className={styles.user}>
-            <a href="/">
+            <Link to="/settings">
               <img
                 src="https://img.icons8.com/external-mixed-line-solid-yogi-aprelliyanto/256/external-user-essential-element-mixed-line-solid-yogi-aprelliyanto.png"
                 alt=""
                 className={styles.userDp}
               />
-            </a>
+            </Link>
             <span>{auth.user.name}</span>
           </div>
         )}
