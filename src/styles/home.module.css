@@ -241,3 +241,9 @@
 .addPostBtn:hover {
   cursor: pointer;
 }
+
+button[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #c8c8c8;
+}

@@ -8,7 +8,7 @@ import {
 
 import { Home, Login, Signup, Settings, UserProfile, Page404 } from '../pages';
 import { Loader, Navbar } from './';
-import { useAuth } from '../hooks';
+import { useAuth } from '../hooks/AuthHook';
 
 function PrivateRoute() {
   const auth = useAuth();

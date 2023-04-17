@@ -1,5 +1,5 @@
 import styles from '../styles/settings.module.css';
-import { useAuth } from '../hooks';
+import { useAuth } from '../hooks/AuthHook';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 

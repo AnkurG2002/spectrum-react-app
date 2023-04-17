@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import { Navigate } from 'react-router-dom';
 
 import styles from '../styles/login.module.css';
-import { useAuth } from '../hooks';
+import { useAuth } from '../hooks/AuthHook';
 
 const Login = () => {
   const [email, setEmail] = useState('');

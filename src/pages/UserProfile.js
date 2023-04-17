@@ -4,7 +4,7 @@ import styles from '../styles/settings.module.css';
 import { addFriend, fetchUserProfile, removeFriend } from '../api';
 import { toast } from 'react-toastify';
 import { Loader } from '../components';
-import { useAuth } from '../hooks';
+import { useAuth } from '../hooks/AuthHook';
 
 const UserProfile = () => {
   const [user, setUser] = useState({});
@@ -13,7 +13,6 @@ const UserProfile = () => {
 
   const navigate = useNavigate();
   const auth = useAuth();
-  console.log('auth', auth);
 
   const { userId } = useParams();
 
